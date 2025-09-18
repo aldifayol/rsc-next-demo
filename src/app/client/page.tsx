@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { bigfileFunc } from "../lib/bigfile";
 
 type Todo = { id: number; title: string; completed: boolean };
 
@@ -8,6 +9,8 @@ export default function ClientPage() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  bigfileFunc();
 
   useEffect(() => {
     setLoading(true);

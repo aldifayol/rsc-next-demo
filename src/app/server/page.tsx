@@ -1,3 +1,5 @@
+import { bigfileFunc } from "../lib/bigfile";
+
 type Todo = { id: number; title: string; completed: boolean };
 
 export default async function ServerPage() {
@@ -7,6 +9,8 @@ export default async function ServerPage() {
 
   console.log("server component");
   console.log(todos);
+
+  bigfileFunc();
 
   return (
     <>
