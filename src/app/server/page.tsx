@@ -1,4 +1,6 @@
 import { bigfileFunc } from "../lib/bigfile";
+import { Client } from "../components/Client";
+import { Server } from "../components/Server";
 
 type Todo = { id: number; title: string; completed: boolean };
 
@@ -15,11 +17,9 @@ export default async function ServerPage() {
   return (
     <>
       <h1>Server Page</h1>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+      <Client>
+        <Server />
+      </Client>
     </>
   );
 }
