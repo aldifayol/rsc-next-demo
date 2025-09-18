@@ -10,7 +10,6 @@ export default async function ServerPage() {
     .then((data) => data as Todo[]);
 
   console.log("server component");
-  console.log(todos);
 
   bigfileFunc();
 
