@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 
+type Todo = { id: number; title: string; completed: boolean };
+
 export default function ClientPage() {
-  const [todos, setTodos] = useState<any[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
