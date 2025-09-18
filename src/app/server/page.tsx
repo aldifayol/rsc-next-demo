@@ -4,6 +4,7 @@ export default async function ServerPage() {
     .then((data) => data as any[]);
 
   console.log("server component");
+  console.log(todos);
 
   return (
     <>
